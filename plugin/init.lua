@@ -25,8 +25,10 @@ local act = wezterm.action
 local M = {}
 
 local DEFAULT_OPTS = {
-  -- Hotkey that opens the picker.
-  key = "P",
+  -- Hotkey that opens the picker. Lowercase key with explicit SHIFT mods
+  -- matches Ctrl+Shift+p unambiguously (uppercase "P" implies shift on its
+  -- own and renders as a bare CTRL binding).
+  key = "p",
   mods = "CTRL|SHIFT",
   -- How much of the window the preview pane takes (fraction, < 1).
   preview_percent = 0.38,
